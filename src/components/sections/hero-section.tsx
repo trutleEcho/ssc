@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
     return (
-        <section className="p-8 pb-18 lg:px-24 overflow-hidden bg-background">
+        <section className="p-4 pb-18 lg:px-24 overflow-hidden bg-background">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
 
             <div className="container relative mx-auto">

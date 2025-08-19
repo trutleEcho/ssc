@@ -5,7 +5,7 @@ import {HorizontalCarouselGallery} from "@/components/sections/horizontal-carous
 import {SimpleGridStats} from "@/components/sections/simple-grid-stats";
 import {SimpleSplitBento} from "@/components/sections/simple-split-bento";
 import {CompanyLogoTestimonials} from "@/components/sections/company-logo-testimonials";
-import {NewsletterFooter} from "@/components/sections/newsletter-footer";
+import {Footer} from "@/components/layout/footer";
 import {GradientOverlayCta} from "@/components/sections/gradient-overlay-cta";
 
 
@@ -20,7 +20,7 @@ export default function HomePage() {
             <SimpleSplitBento/>
             <CompanyLogoTestimonials/>
             <GradientOverlayCta/>
-            <NewsletterFooter/>
+            <Footer/>
         </>
     );
 }

@@ -68,7 +68,7 @@ const Header = () => {
     }, [activeItem]);
 
     return (
-        <section className="py-4 sticky top-0 z-10 bg-gradient-to-t from-transparent via-background/50 to-background">
+        <section className="py-4 sticky top-0 z-10 bg-gradient-to-t from-transparent via-background/20 to-background">
             <nav className="container flex items-center justify-between">
                 {/* Left WordMark */}
                 <a href={NAV_LOGO.url} className="flex items-center gap-2">

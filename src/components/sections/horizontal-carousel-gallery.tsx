@@ -84,7 +84,7 @@ const data = [
 
 const HorizontalCarouselGallery = ({
                                        title = "Explore Our Product Categories",
-                                       description = "Discover our comprehensive range of authentic Ayurvedic products, from traditional medicines to modern wellness solutions, all sourced and prepared with the highest quality standards.",
+                                       description = "Discover our comprehensive range of authentic Ayurvedic products, from traditional medicines to modern wellness solutions.",
                                        items = data,
                                    }: HorizontalCarouselGalleryProps) => {
     const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -109,7 +109,7 @@ const HorizontalCarouselGallery = ({
     }, [carouselApi]);
 
     return (
-        <section className="py-32 bg-background">
+        <section className="p-18 bg-background">
             <div className="container mx-auto">
                 <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
                     <div className="flex flex-col gap-4">
@@ -155,7 +155,7 @@ const HorizontalCarouselGallery = ({
                         },
                     }}
                 >
-                    <CarouselContent className="ml-0 2xl:mr-[max(0rem,calc(50vw-700px))] 2xl:ml-[max(8rem,calc(50vw-700px))]">
+                    <CarouselContent className="">
                         {items.map((item) => (
                             <CarouselItem
                                 key={item.id}

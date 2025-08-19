@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 const utilities = [
     {
-        title: "Premium Quality Assurance",
+        title: "Quality Assurance",
         description:
-            "All products are sourced from certified manufacturers and undergo rigorous quality testing",
+            "All products are sourced from certified manufacturers and verified brands",
         image:
             "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0",
     },
@@ -39,15 +40,17 @@ const ThreeColumnImageCards = () => {
                         Three decades of excellence in Ayurvedic wholesale distribution
                     </p>
                     <div className="mt-8 flex flex-col items-center space-y-2">
-                        <Button
-                            className="rounded-xl bg-primary hover:bg-emerald text-primary-foreground"
-                            size="lg"
-                        >
-                            Learn More About Us
-                        </Button>
+                        <Link href="/about">
+                            <Button
+                                className="rounded-xl bg-primary hover:bg-emerald/80 hover:scale-105 text-primary-foreground"
+                                size="lg"
+                            >
+                                Learn More About Us
+                            </Button>
+                        </Link>
                     </div>
                 </div>
-                <div className="mt-11 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-11 px-12 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {utilities.map((utility, index) => (
                         <Card key={index} className="border-0 pt-0 bg-card">
                             <img

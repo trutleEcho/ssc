@@ -1,0 +1,18 @@
+[
+  {
+    "version": "0.0.2",
+    "date": "2025-08-19",
+    "changes": [
+      "Updated home screen and fixed the lay-outing for all components on home page.",
+      "Added changelog screen."
+    ]
+  },
+  {
+    "version": "0.0.1",
+    "date": "2025-08-17",
+    "changes": [
+      "Project started and vercel deployed",
+      "Added Home, Products, About Us, Quality, Contact screens"
+    ]
+  }
+]

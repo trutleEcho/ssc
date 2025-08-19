@@ -54,9 +54,9 @@ const testimonials = [
 
 const CompanyLogoTestimonials = () => {
     return (
-        <section className="py-32 bg-background">
+        <section className="p-18 bg-background">
             <div className="border-y border-border">
-                <div className="container flex flex-col gap-6 border-x border-border py-4 max-lg:border-x lg:py-8">
+                <div className="container flex flex-col gap-6 py-4 max-lg:border-x lg:py-8">
                     <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl font-[var(--font-display)] text-foreground">
                         What Our Wholesale Partners Say
                     </h2>
@@ -101,10 +101,6 @@ const CompanyLogoTestimonials = () => {
                         </div>
                     </Card>
                 ))}
-            </div>
-
-            <div className="mt-12 h-8 w-full border-y border-border md:h-12 lg:h-[112px]">
-                <div className="container h-full w-full border-x border-border"></div>
             </div>
         </section>
     );

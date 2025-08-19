@@ -10,7 +10,7 @@ interface GlobalErrorProps {
     reset: () => void;
 }
 
-export default function GlobalError({ error, reset }: GlobalErrorProps) {
+export default function GlobalError({ error }: GlobalErrorProps) {
     useEffect(() => {
         // Log error for debugging and monitoring
         console.error("Global error occurred:", error);
@@ -22,6 +22,10 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
     const handleGoHome = () => {
         window.location.href = "/";
     };
+
+    const handelTryAgain = async () => {
+        window.location.reload();
+    }
 
     return (
         <html lang="en" className="dark">
@@ -130,7 +134,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                     zIndex: 10,
                 }}
             >
-                {/* Corner Software Branding */}
+                {/* Shivam Sales Corporation Branding */}
                 <div
                     style={{
                         display: "flex",
@@ -142,44 +146,12 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                 >
                     {/* 64x64 Logos */}
                     <Image
-                        src="/CORSW_BG_LIGHT_64x64.png"
+                        src="/SSC_Label.png"
                         alt="Logo"
-                        width={64}
+                        width={124}
                         height={64}
                         className="hidden md:block dark:hidden"
                     />
-                    <Image
-                        src="/CORSW_BG_DARK_64x64.png"
-                        alt="Logo"
-                        width={64}
-                        height={64}
-                        className="hidden dark:md:block"
-                    />
-
-                    {/* 32x32 Logos */}
-                    <Image
-                        src="/CORSW_BG_LIGHT_32x32.png"
-                        alt="Logo"
-                        width={32}
-                        height={32}
-                        className="block md:hidden dark:hidden"
-                    />
-                    <Image
-                        src="/CORSW_BG_DARK_32x32.png"
-                        alt="Logo"
-                        width={32}
-                        height={32}
-                        className="hidden dark:block dark:md:hidden"
-                    />
-                    <span
-                        style={{
-                            fontSize: "1.25rem",
-                            fontWeight: "600",
-                            color: "#fafafa",
-                        }}
-                    >
-                Corner Software
-              </span>
                 </div>
 
                 {/* Error Icon */}
@@ -258,7 +230,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                     }}
                 >
                     <Button
-                        onClick={reset}
+                        onClick={handelTryAgain}
                         style={{
                             width: "100%",
                             background: "#22c55e",

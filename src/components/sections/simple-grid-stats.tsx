@@ -1,6 +1,6 @@
 const SimpleGridStats = () => {
     return (
-        <section className="py-32 bg-background">
+        <section className="p-18 bg-background">
             <div className="container mx-auto">
                 <h1 className="text-center text-4xl font-semibold lg:text-6xl font-display">
                     Trusted by Businesses Across India
@@ -11,7 +11,7 @@ const SimpleGridStats = () => {
                             Years of Experience
                         </p>
                         <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">30+</p>
-                        <p className="text-2xl font-semibold text-muted-foreground">
+                        <p className="text-xl font-semibold text-muted-foreground">
                             Serving the Ayurvedic industry with dedication
                         </p>
                     </div>
@@ -20,7 +20,7 @@ const SimpleGridStats = () => {
                             Product Varieties
                         </p>
                         <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">5000+</p>
-                        <p className="text-2xl font-semibold text-muted-foreground">
+                        <p className="text-xl font-semibold text-muted-foreground">
                             Comprehensive range of Ayurvedic products
                         </p>
                     </div>
@@ -28,8 +28,8 @@ const SimpleGridStats = () => {
                         <p className="text-sm font-medium text-muted-foreground">
                             Happy Clients
                         </p>
-                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">2500+</p>
-                        <p className="text-2xl font-semibold text-muted-foreground">
+                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">500+</p>
+                        <p className="text-xl font-semibold text-muted-foreground">
                             Retailers and pharmacies nationwide
                         </p>
                     </div>

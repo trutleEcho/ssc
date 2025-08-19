@@ -4,7 +4,7 @@ import { Leaf, Shield, Heart } from "lucide-react";
 
 const SimpleSplitBento = () => {
     return (
-        <section className="container py-32 bg-background">
+        <section className="container p-18 bg-background">
             <h2 className="text-2xl font-semibold md:text-4xl text-foreground">
                 Our Ayurvedic Journey
             </h2>
@@ -14,8 +14,9 @@ const SimpleSplitBento = () => {
                         <Leaf className="size-6 text-primary" />
                         <h4 className="text-xl font-semibold">Heritage & Tradition</h4>
                         <p className="text-base font-normal text-muted-foreground">
-                            Honoring centuries-old Ayurvedic wisdom passed down through generations.
-                            We preserve traditional formulations while ensuring authenticity in every product.
+                            We carefully source Ayurvedic products that honor centuries-old traditions.
+                            Each product reflects authentic wisdom passed down through generations, ensuring
+                            that businesses and customers receive trusted, heritage-rich offerings.
                         </p>
                     </div>
                     <img
@@ -34,10 +35,11 @@ const SimpleSplitBento = () => {
                     </div>
                     <div className="flex flex-col gap-3 p-12">
                         <Shield className="size-6 text-primary" />
-                        <h4 className="text-xl font-semibold">Modern Quality Standards</h4>
+                        <h4 className="text-xl font-semibold">Trusted Quality</h4>
                         <p className="text-base font-normal text-muted-foreground">
-                            Contemporary testing protocols and quality assurance ensure every product
-                            meets international standards while maintaining traditional efficacy.
+                            We partner with reputed manufacturers who follow modern testing protocols
+                            and quality standards. By curating only reliable products, we ensure that
+                            every item we distribute maintains both safety and authenticity.
                         </p>
                     </div>
                 </div>
@@ -47,16 +49,16 @@ const SimpleSplitBento = () => {
                     <Heart className="size-6 text-primary" />
                     <h4 className="text-xl font-semibold">Our Mission</h4>
                     <p className="text-base font-normal text-muted-foreground">
-                        Committed to making authentic Ayurvedic products accessible to businesses
-                        nationwide. We bridge the gap between traditional wellness and modern commerce,
-                        empowering retailers and distributors with premium quality products that honor
-                        the ancient science of Ayurveda.
+                        Our goal is to make authentic Ayurvedic products easily accessible to businesses
+                        nationwide. By bridging the gap between trusted manufacturers and retailers, we
+                        empower distributors and shop owners with premium products that respect the ancient
+                        science of Ayurveda while meeting modern consumer needs.
                     </p>
                 </div>
                 <div className="w-full pl-12 md:pt-12">
                     <img
                         src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=center"
-                        alt="Our team and modern facility dedicated to Ayurvedic excellence"
+                        alt="Our team dedicated to sourcing and delivering Ayurvedic excellence"
                         className="max-h-96 w-full rounded-tl-md object-cover shadow-[0_0_10px_rgb(0,0,0,0.2)]"
                     />
                 </div>
