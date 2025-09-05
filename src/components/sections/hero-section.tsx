@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -34,6 +36,7 @@ const HeroSection = () => {
                         </p>
 
                         <div className="flex w-full flex-col justify-center gap-3 sm:flex-row lg:justify-start pt-2">
+                            <Link href="/products">
                             <Button
                                 size="lg"
                                 className="w-full sm:w-auto group bg-primary hover:bg-emerald text-primary-foreground border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 rounded-full px-8"
@@ -41,14 +44,17 @@ const HeroSection = () => {
                                 View Product Catalog
                                 <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <Button
-                                size="lg"
-                                variant="outline"
-                                className="w-full sm:w-auto group bg-surface hover:bg-secondary text-foreground border border-border rounded-full px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                            >
-                                Get Wholesale Pricing
-                                <ArrowUpRight className="ml-2 size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                            </Button>
+                            </Link>
+                            <Link href="/contact">
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="w-full sm:w-auto group bg-surface hover:bg-secondary text-foreground border border-border rounded-full px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                >
+                                    Get Wholesale Pricing
+                                    <ArrowUpRight className="ml-2 size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 

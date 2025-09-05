@@ -3,23 +3,23 @@
 export const revalidate = false;
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
+import {useState, useEffect} from "react";
+import {Menu, X, Sun, Moon} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "next-themes";
 import Image from "next/image";
 
 const NAV_ITEMS = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    {name: "Home", href: "/"},
+    {name: "Products", href: "/products"},
+    {name: "About Us", href: "/about"},
+    {name: "Contact", href: "/contact"},
 ];
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const { theme, setTheme } = useTheme();
+    const {theme, setTheme} = useTheme();
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -64,7 +64,8 @@ export default function Header() {
                                 className="text-foreground hover:text-primary transition-colors duration-200 font-medium relative group"
                             >
                                 {item.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                                <span
+                                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                             </Link>
                         ))}
                     </div>
@@ -78,18 +79,21 @@ export default function Header() {
                             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                             className="hidden sm:flex"
                         >
-                            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"/>
+                            <Moon
+                                className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"/>
                             <span className="sr-only">Toggle theme</span>
                         </Button>
 
                         {/* CTA (only on desktop) */}
-                        <Button
-                            size="sm"
-                            className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground"
-                        >
-                            Get Wholesale Quote
-                        </Button>
+                        <Link href="/contact">
+                            <Button
+                                size="sm"
+                                className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground"
+                            >
+                                Get Wholesale Quote
+                            </Button>
+                        </Link>
 
                         {/* Mobile menu button */}
                         <Button
@@ -98,7 +102,7 @@ export default function Header() {
                             className="md:hidden"
                             onClick={() => setIsOpen(!isOpen)}
                         >
-                            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                            {isOpen ? <X className="h-5 w-5"/> : <Menu className="h-5 w-5"/>}
                         </Button>
                     </div>
                 </div>
@@ -106,7 +110,8 @@ export default function Header() {
                 {/* Mobile Navigation */}
                 {isOpen && (
                     <div className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border">
+                        <div
+                            className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border">
                             {NAV_ITEMS.map((item) => (
                                 <Link
                                     key={item.name}
@@ -124,13 +129,17 @@ export default function Header() {
                                     onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                                     className="w-full justify-start"
                                 >
-                                    <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 mr-2" />
-                                    <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 ml-2" />
+                                    <Sun
+                                        className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 mr-2"/>
+                                    <Moon
+                                        className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 ml-2"/>
                                     Toggle theme
                                 </Button>
-                                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                                    Get Wholesale Quote
-                                </Button>
+                                <Link href="/contact">
+                                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                                        Get Wholesale Quote
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
