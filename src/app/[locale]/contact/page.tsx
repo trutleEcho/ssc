@@ -22,30 +22,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
 
-const LeftBorderIndicatorNavbar = () => {
-    return (
-        <nav className="bg-white border-b border-border">
-            <div className="container mx-auto px-4">
-                <div className="flex items-center justify-between h-16">
-                    <div className="flex items-center space-x-4">
-                        <div className="w-1 h-8 bg-primary rounded-full"></div>
-                        <div>
-                            <h1 className="text-xl font-bold text-foreground">Shivam Sales Corporation</h1>
-                            <p className="text-sm text-muted-foreground">Ayurvedic Wholesaler</p>
-                        </div>
-                    </div>
-                    <div className="hidden md:flex items-center space-x-6">
-                        <Link href="/public" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>
-                        <Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">Products</Link>
-                        <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
-                        <Link href="/contact" className="text-primary font-medium">Contact</Link>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
-};
-
 interface ContactFormData {
     companyName: string;
     contactPerson: string;
@@ -99,7 +75,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background lg:px-24">
             {/* Hero Section */}
             <section className="py-20 bg-gradient-to-br from-primary/5 to-emerald/5">
                 <div className="container mx-auto px-4 text-center">
@@ -138,41 +114,15 @@ export default function ContactPage() {
                                     </p>
                                 </div>
 
-                                <div>
-                                    <h4 className="font-semibold text-foreground mb-2">Customer Support</h4>
-                                    <p className="text-muted-foreground flex items-center gap-2">
-                                        <Phone className="w-4 h-4" />
-                                        +91 98765 43211
-                                    </p>
-                                    <p className="text-muted-foreground flex items-center gap-2">
-                                        <Mail className="w-4 h-4" />
-                                        support@shivamsales.com
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h4 className="font-semibold text-foreground mb-2">Management</h4>
-                                    <p className="text-muted-foreground flex items-center gap-2">
-                                        <Phone className="w-4 h-4" />
-                                        +91 98765 43212
-                                    </p>
-                                    <p className="text-muted-foreground flex items-center gap-2">
-                                        <Mail className="w-4 h-4" />
-                                        info@shivamsales.com
-                                    </p>
-                                </div>
-
                                 <div className="pt-4 border-t border-border">
                                     <h4 className="font-semibold text-foreground mb-2">Quick Communication</h4>
                                     <div className="flex gap-3">
-                                        <Button variant="outline" size="sm" className="flex items-center gap-2">
-                                            <MessageCircle className="w-4 h-4 text-green-600" />
-                                            WhatsApp
-                                        </Button>
-                                        <Button variant="outline" size="sm" className="flex items-center gap-2">
-                                            <Send className="w-4 h-4 text-blue-600" />
-                                            Telegram
-                                        </Button>
+                                        <Link href="">
+                                            <Button variant="outline" size="sm" className="flex items-center gap-2">
+                                                <MessageCircle className="w-4 h-4 text-green-600" />
+                                                WhatsApp
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </CardContent>
@@ -189,7 +139,7 @@ export default function ContactPage() {
                             <CardContent>
                                 <div className="space-y-4">
                                     <div>
-                                        <h4 className="font-semibold text-foreground mb-2">Head Office</h4>
+                                        <h4 className="font-semibold text-foreground mb-2">Office</h4>
                                         <p className="text-muted-foreground">
                                             123 Ayurveda Business Complex<br />
                                             Sector 18, Industrial Area<br />
@@ -230,10 +180,6 @@ export default function ContactPage() {
                                     <FileText className="w-4 h-4 mr-2" />
                                     Price List
                                 </Button>
-                                <Button variant="outline" className="w-full justify-start" size="sm">
-                                    <Building className="w-4 h-4 mr-2" />
-                                    Company Profile
-                                </Button>
                             </CardContent>
                         </Card>
 
@@ -264,7 +210,7 @@ export default function ContactPage() {
                             <CardContent>
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-4">
-                                        <div>
+                                        <div className="space-y-2">
                                             <Label htmlFor="companyName">Company Name *</Label>
                                             <Input
                                                 id="companyName"
@@ -274,7 +220,7 @@ export default function ContactPage() {
                                                 required
                                             />
                                         </div>
-                                        <div>
+                                        <div className="space-y-2">
                                             <Label htmlFor="contactPerson">Contact Person *</Label>
                                             <Input
                                                 id="contactPerson"
@@ -287,7 +233,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="grid md:grid-cols-2 gap-4">
-                                        <div>
+                                        <div className="space-y-2">
                                             <Label htmlFor="email">Email Address *</Label>
                                             <Input
                                                 id="email"
@@ -298,7 +244,7 @@ export default function ContactPage() {
                                                 required
                                             />
                                         </div>
-                                        <div>
+                                        <div className="space-y-2">
                                             <Label htmlFor="phone">Phone Number *</Label>
                                             <Input
                                                 id="phone"
@@ -310,41 +256,7 @@ export default function ContactPage() {
                                         </div>
                                     </div>
 
-                                    <div className="grid md:grid-cols-2 gap-4">
-                                        <div>
-                                            <Label htmlFor="productInterest">Product Interest Category</Label>
-                                            <Select value={formData.productInterest} onValueChange={(value) => handleInputChange("productInterest", value)}>
-                                                <SelectTrigger>
-                                                    <SelectValue placeholder="Select product category" />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectItem value="herbs">Raw Herbs & Powders</SelectItem>
-                                                    <SelectItem value="medicines">Classical Medicines</SelectItem>
-                                                    <SelectItem value="oils">Ayurvedic Oils</SelectItem>
-                                                    <SelectItem value="extracts">Herbal Extracts</SelectItem>
-                                                    <SelectItem value="cosmetics">Ayurvedic Cosmetics</SelectItem>
-                                                    <SelectItem value="all">All Categories</SelectItem>
-                                                </SelectContent>
-                                            </Select>
-                                        </div>
-                                        <div>
-                                            <Label htmlFor="orderQuantity">Expected Order Quantity</Label>
-                                            <Select value={formData.orderQuantity} onValueChange={(value) => handleInputChange("orderQuantity", value)}>
-                                                <SelectTrigger>
-                                                    <SelectValue placeholder="Select quantity range" />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectItem value="100-500">100 - 500 units</SelectItem>
-                                                    <SelectItem value="500-1000">500 - 1,000 units</SelectItem>
-                                                    <SelectItem value="1000-5000">1,000 - 5,000 units</SelectItem>
-                                                    <SelectItem value="5000+">5,000+ units</SelectItem>
-                                                    <SelectItem value="bulk">Bulk Orders (Custom)</SelectItem>
-                                                </SelectContent>
-                                            </Select>
-                                        </div>
-                                    </div>
-
-                                    <div>
+                                    <div className="space-y-2">
                                         <Label htmlFor="message">Message / Requirements</Label>
                                         <Textarea
                                             id="message"
@@ -390,15 +302,13 @@ export default function ContactPage() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <div className="h-64 bg-gradient-to-br from-primary/10 to-emerald/10 rounded-lg flex items-center justify-center border-2 border-dashed border-primary/20">
-                                    <div className="text-center">
-                                        <MapPin className="w-12 h-12 text-primary mx-auto mb-3" />
-                                        <h4 className="font-semibold text-foreground mb-2">Interactive Map</h4>
-                                        <p className="text-sm text-muted-foreground">
-                                            Map integration showing our office location<br />
-                                            123 Ayurveda Business Complex, New Delhi
-                                        </p>
-                                    </div>
+                                <div
+                                    className="h-64 bg-gradient-to-br from-primary/10 to-emerald/10 rounded-lg flex items-center justify-center border-2 border-dashed border-primary/20">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243290.95780848627!2d75.59894819453126!3d17.677551100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5da809be54c21%3A0xa58905a6156c6608!2sShivam%20Sales%20Corporation!5e0!3m2!1sen!2sin!4v1757080862356!5m2!1sen!2sin"
+                                        allowFullScreen loading="lazy"
+                                        className="w-full h-full"
+                                        referrerPolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </CardContent>
                         </Card>
