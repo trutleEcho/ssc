@@ -1,9 +1,7 @@
-export const revalidate = false;
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Leaf, Award, Users, TrendingUp, Shield, Globe, Building, CheckCircle, Star, MapPin, Calendar, Target, Heart, Lightbulb, Handshake, Clock, Package, Truck, Factory } from 'lucide-react';
+import { Leaf, Users, TrendingUp, Shield, Globe,  CheckCircle,  MapPin, Calendar, Target, Heart, Lightbulb, Handshake, Clock, Package, Truck } from 'lucide-react';
 
 interface StatisticCardProps {
     icon: React.ReactNode;
@@ -28,12 +26,6 @@ interface LeadershipMemberProps {
     name: string;
     position: string;
     experience: string;
-    description: string;
-}
-
-interface CertificationProps {
-    icon: React.ReactNode;
-    title: string;
     description: string;
 }
 
@@ -95,23 +87,11 @@ const LeadershipMember: React.FC<LeadershipMemberProps> = ({ name, position, exp
     </Card>
 );
 
-const CertificationCard: React.FC<CertificationProps> = ({ icon, title, description }) => (
-    <Card className="p-6 hover:shadow-lg transition-shadow duration-300 text-center">
-        <CardContent className="p-0">
-            <div className="flex justify-center mb-4 text-accent">
-                {icon}
-            </div>
-            <h3 className="text-lg font-semibold mb-2">{title}</h3>
-            <p className="text-muted-foreground text-sm">{description}</p>
-        </CardContent>
-    </Card>
-);
-
 export default function AboutPage() {
     const statistics = [
-        { icon: <Calendar className="w-8 h-8" />, value: "25+", label: "Years in Business" },
+        { icon: <Calendar className="w-8 h-8" />, value: "10+", label: "Years in Business" },
         { icon: <Package className="w-8 h-8" />, value: "5000+", label: "Products Distributed" },
-        { icon: <MapPin className="w-8 h-8" />, value: "200+", label: "Cities Served" },
+        { icon: <MapPin className="w-8 h-8" />, value: "50+", label: "Cities Served" },
         { icon: <Users className="w-8 h-8" />, value: "10,000+", label: "Satisfied Customers" }
     ];
 
@@ -140,78 +120,44 @@ export default function AboutPage() {
 
     const timeline = [
         {
-            year: "1998",
+            year: "2015",
             title: "Foundation",
             description: "Shivam Sales Corporation was established with a vision to make authentic Ayurvedic products accessible across India."
         },
         {
-            year: "2005",
+            year: "2018",
             title: "Expansion Phase",
             description: "Extended our distribution network to 50 cities and partnered with leading Ayurvedic manufacturers."
         },
         {
-            year: "2012",
+            year: "2020",
             title: "Digital Integration",
             description: "Implemented modern inventory management systems and established online ordering platforms for retailers."
         },
         {
-            year: "2018",
-            title: "Quality Certification",
-            description: "Achieved ISO certification and established state-of-the-art quality control facilities."
-        },
-        {
             year: "2024",
             title: "Market Leadership",
-            description: "Recognized as one of India's leading Ayurvedic wholesalers serving 200+ cities with 5000+ products."
+            description: "Recognized as one of Solapur's leading Ayurvedic wholesalers serving 50+ cities with 5000+ products."
         }
     ];
 
     const leadership = [
         {
-            name: "Rajesh Sharma",
-            position: "Founder & Managing Director",
-            experience: "25+ Years Experience",
-            description: "A visionary leader with deep knowledge of Ayurvedic traditions and modern business practices. Under his guidance, the company has grown from a local distributor to a national wholesale leader."
+            name: "Anil Tanksali",
+            position: "Managing Director",
+            experience: "40+ Years Experience",
+            description: "Expert in supply chain management and quality assurance."
         },
         {
-            name: "Priya Sharma",
-            position: "Operations Director",
-            experience: "20+ Years Experience",
-            description: "Expert in supply chain management and quality assurance. She oversees our distribution network and ensures seamless delivery across all our service locations."
-        },
-        {
-            name: "Dr. Amit Patel",
+            name: "Prashant Tanksali",
             position: "Quality Assurance Head",
-            experience: "15+ Years Experience",
-            description: "An Ayurvedic practitioner and quality expert who ensures all products meet traditional standards while complying with modern regulatory requirements."
-        }
-    ];
-
-    const certifications = [
-        {
-            icon: <Award className="w-12 h-12" />,
-            title: "ISO 9001:2015",
-            description: "Quality management system certification"
-        },
-        {
-            icon: <Shield className="w-12 h-12" />,
-            title: "FSSAI License",
-            description: "Food safety and standards authority approval"
-        },
-        {
-            icon: <Star className="w-12 h-12" />,
-            title: "Ayush License",
-            description: "Ministry of Ayush certified distributor"
-        },
-        {
-            icon: <CheckCircle className="w-12 h-12" />,
-            title: "GMP Certified",
-            description: "Good manufacturing practices compliance"
+            experience: "40+ Years Experience",
+            description: " He oversees our distribution network and ensures seamless delivery across all our service locations."
         }
     ];
 
     const advantages = [
-        "Extensive network of 200+ cities across India",
+        "Extensive network of 50+ cities across India",
         "Direct partnerships with authentic Ayurvedic manufacturers",
         "State-of-the-art warehousing and cold storage facilities",
         "Real-time inventory tracking and automated ordering system",
@@ -228,10 +174,10 @@ export default function AboutPage() {
                         <div>
                             <Badge className="mb-4 bg-primary/10 text-primary">About Shivam Sales Corporation</Badge>
                             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-emerald bg-clip-text text-transparent">
-                                25+ Years of Ayurvedic Excellence
+                                10+ Years of Ayurvedic Excellence
                             </h1>
                             <p className="text-xl text-muted-foreground mb-8">
-                                Since 1998, we have been India&apos;s trusted wholesale partner for authentic Ayurvedic products,
+                                Since 2015, we have been India&apos;s trusted wholesale partner for authentic Ayurvedic products,
                                 connecting ancient wisdom with modern distribution excellence.
                             </p>
                             <div className="flex items-center space-x-4">
@@ -367,25 +313,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Certifications */}
-            <section className="py-20 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <Badge className="mb-4 bg-primary/10 text-primary">Quality Assurance</Badge>
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-6">Certifications & Accreditations</h2>
-                        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            Our commitment to quality is validated by industry-leading certifications and regulatory approvals
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {certifications.map((cert, index) => (
-                            <CertificationCard key={index} {...cert} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* Why Choose Us */}
             <section className="py-20 px-4 bg-muted/30">
                 <div className="max-w-7xl mx-auto">
@@ -440,69 +367,6 @@ export default function AboutPage() {
                                 </CardContent>
                             </Card>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Our Facilities */}
-            <section className="py-20 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <Badge className="mb-4 bg-accent/10 text-accent">Infrastructure</Badge>
-                        <h2 className="text-3xl lg:text-5xl font-bold mb-6">Our Facilities</h2>
-                        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            State-of-the-art infrastructure supporting our nationwide distribution network
-                        </p>
-                    </div>
-
-                    <div className="grid lg:grid-cols-3 gap-8">
-                        <Card className="p-8 hover:shadow-lg transition-shadow duration-300">
-                            <CardContent className="p-0">
-                                <Building className="w-12 h-12 text-primary mb-6" />
-                                <h3 className="text-xl font-semibold mb-4">Warehousing Network</h3>
-                                <p className="text-muted-foreground mb-4">
-                                    Modern warehouses across key locations with temperature-controlled storage
-                                    for sensitive Ayurvedic products and herbs.
-                                </p>
-                                <ul className="space-y-2 text-sm text-muted-foreground">
-                                    <li>• 50,000+ sq ft storage capacity</li>
-                                    <li>• Climate-controlled environments</li>
-                                    <li>• Advanced inventory management</li>
-                                </ul>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="p-8 hover:shadow-lg transition-shadow duration-300">
-                            <CardContent className="p-0">
-                                <Factory className="w-12 h-12 text-accent mb-6" />
-                                <h3 className="text-xl font-semibold mb-4">Quality Control Lab</h3>
-                                <p className="text-muted-foreground mb-4">
-                                    In-house testing facilities ensuring every product meets strict quality
-                                    standards before reaching our customers.
-                                </p>
-                                <ul className="space-y-2 text-sm text-muted-foreground">
-                                    <li>• Microbiological testing</li>
-                                    <li>• Heavy metal detection</li>
-                                    <li>• Authenticity verification</li>
-                                </ul>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="p-8 hover:shadow-lg transition-shadow duration-300">
-                            <CardContent className="p-0">
-                                <Truck className="w-12 h-12 text-emerald mb-6" />
-                                <h3 className="text-xl font-semibold mb-4">Distribution Network</h3>
-                                <p className="text-muted-foreground mb-4">
-                                    Efficient logistics network ensuring timely delivery across 200+ cities
-                                    with real-time tracking capabilities.
-                                </p>
-                                <ul className="space-y-2 text-sm text-muted-foreground">
-                                    <li>• GPS-enabled fleet management</li>
-                                    <li>• Same-day delivery in metros</li>
-                                    <li>• Temperature-controlled transport</li>
-                                </ul>
-                            </CardContent>
-                        </Card>
                     </div>
                 </div>
             </section>
