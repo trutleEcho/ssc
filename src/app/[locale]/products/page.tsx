@@ -21,6 +21,7 @@ import {
     Phone,
     Mail
 } from 'lucide-react';
+import Link from "next/link";
 
 interface ProductCategory {
     icon: React.ComponentType<{ className?: string }>;
@@ -133,37 +134,23 @@ export default function ProductsPage() {
             <section className="bg-gradient-to-br from-primary/5 via-emerald/5 to-accent/5 py-16">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
                             Our Products
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
                             Discover our extensive range of premium Ayurvedic products, carefully sourced and quality-tested
                             for wholesale distribution across India. From traditional formulations to modern supplements.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Badge variant="secondary" className="text-sm px-4 py-2">
-                                <Award className="w-4 h-4 mr-2" />
-                                ISO Certified
-                            </Badge>
-                            <Badge variant="secondary" className="text-sm px-4 py-2">
-                                <CheckCircle className="w-4 h-4 mr-2" />
-                                Quality Assured
-                            </Badge>
-                            <Badge variant="secondary" className="text-sm px-4 py-2">
-                                <Leaf className="w-4 h-4 mr-2" />
-                                100% Natural
-                            </Badge>
-                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Product Categories Grid */}
-            <section className="py-16">
+            <section className="py-16" id="product-categories">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Product Categories</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold  mb-4">Product Categories</h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
                             Explore our comprehensive collection of Ayurvedic products across multiple categories,
                             each carefully curated for quality and efficacy.
                         </p>
@@ -181,12 +168,12 @@ export default function ProductsPage() {
                                             {category.productCount}+ items
                                         </Badge>
                                     </div>
-                                    <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                                    <CardTitle className="text-lg font-semibold group-hover:text-primary transition-colors">
                                         {category.title}
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                    <p className="text-muted-foreground text-sm leading-relaxed">
                                         {category.description}
                                     </p>
                                 </CardContent>
@@ -200,8 +187,8 @@ export default function ProductsPage() {
             <section className="py-16 bg-muted/30">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
                             Our bestselling and most trusted products, popular among retailers and distributors nationwide.
                         </p>
                     </div>
@@ -218,10 +205,10 @@ export default function ProductsPage() {
                                     </Badge>
                                 </div>
                                 <CardContent className="p-6">
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                                         {product.name}
                                     </h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                                         {product.description}
                                     </p>
                                     <div className="flex items-center justify-between">
@@ -230,7 +217,7 @@ export default function ProductsPage() {
                                                 <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                                             ))}
                                         </div>
-                                        <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
+                                        <Button disabled variant="ghost" size="sm" className="text-primary hover:text-primary/80">
                                             View Details
                                             <ArrowRight className="w-4 h-4 ml-2" />
                                         </Button>
@@ -242,69 +229,13 @@ export default function ProductsPage() {
                 </div>
             </section>
 
-            {/* Product Specifications */}
-            <section className="py-16">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Quality Standards & Specifications</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Every product in our catalog meets the highest quality standards with proper certifications and packaging.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Card className="text-center p-8 border-2 border-dashed border-primary/20 hover:border-primary/40 transition-colors">
-                            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <Award className="w-8 h-8 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• ISO 9001:2015 Certified</li>
-                                <li>• AYUSH License Compliant</li>
-                                <li>• GMP Standards</li>
-                                <li>• Organic Certifications</li>
-                                <li>• Lab Tested Quality</li>
-                            </ul>
-                        </Card>
-
-                        <Card className="text-center p-8 border-2 border-dashed border-emerald/20 hover:border-emerald/40 transition-colors">
-                            <div className="w-16 h-16 bg-emerald/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <Package2 className="w-8 h-8 text-emerald" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Packaging Options</h3>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• Bulk Packaging Available</li>
-                                <li>• Custom Label Solutions</li>
-                                <li>• Eco-Friendly Materials</li>
-                                <li>• Various Size Options</li>
-                                <li>• Secure Transportation</li>
-                            </ul>
-                        </Card>
-
-                        <Card className="text-center p-8 border-2 border-dashed border-accent/20 hover:border-accent/40 transition-colors">
-                            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <CheckCircle className="w-8 h-8 text-accent" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">Quality Assurance</h3>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• Third-party Lab Testing</li>
-                                <li>• Batch-wise Quality Check</li>
-                                <li>• Shelf Life Guarantee</li>
-                                <li>• Purity Verification</li>
-                                <li>• Customer Satisfaction</li>
-                            </ul>
-                        </Card>
-                    </div>
-                </div>
-            </section>
-
             {/* Bulk Order Benefits */}
             <section className="py-16 bg-gradient-to-br from-primary/5 via-transparent to-emerald/5">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Wholesale Benefits</h2>
-                            <p className="text-gray-600 max-w-2xl mx-auto">
+                            <h2 className="text-3xl font-bold mb-4">Wholesale Benefits</h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
                                 Partner with us for competitive pricing, flexible terms, and comprehensive support for your business growth.
                             </p>
                         </div>
@@ -316,8 +247,8 @@ export default function ProductsPage() {
                                         <Scale className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Competitive Wholesale Pricing</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="text-lg font-semibold mb-2">Competitive Wholesale Pricing</h3>
+                                        <p className="text-muted-foreground">
                                             Get the best market rates with tiered pricing based on order quantity and long-term partnerships.
                                         </p>
                                     </div>
@@ -328,8 +259,8 @@ export default function ProductsPage() {
                                         <Truck className="w-6 h-6 text-emerald" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast & Reliable Delivery</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="text-lg font-semibold mb-2">Fast & Reliable Delivery</h3>
+                                        <p className="text-muted-foreground">
                                             Nationwide delivery network ensures your orders reach you quickly and in perfect condition.
                                         </p>
                                     </div>
@@ -340,37 +271,37 @@ export default function ProductsPage() {
                                         <FileText className="w-6 h-6 text-accent" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Flexible Payment Terms</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="text-lg font-semibold mb-2">Flexible Payment Terms</h3>
+                                        <p className="tmf">
                                             Convenient payment options and credit facilities for established business partners.
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <Card className="p-8 bg-white border-2 border-primary/20">
-                                <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">Minimum Order Quantities</h3>
+                            <Card className="p-8 bg-primary/50 border-2 border-primary/20">
+                                <h3 className="text-xl font-semibold mb-6 text-center">Minimum Order Quantities</h3>
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                        <span className="text-gray-600">Herbal Medicines</span>
-                                        <span className="font-semibold text-primary">500+ units</span>
+                                        <span>Herbal Medicines</span>
+                                        <span className="font-semibold text-primary">50+ units</span>
                                     </div>
                                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                        <span className="text-gray-600">Oils & Balms</span>
-                                        <span className="font-semibold text-primary">200+ units</span>
+                                        <span>Oils & Balms</span>
+                                        <span className="font-semibold text-primary">20+ units</span>
                                     </div>
                                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                        <span className="text-gray-600">Powders & Churnas</span>
-                                        <span className="font-semibold text-primary">300+ units</span>
+                                        <span>Powders & Churnas</span>
+                                        <span className="font-semibold text-primary">30+ units</span>
                                     </div>
                                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                                        <span className="text-gray-600">Supplements</span>
-                                        <span className="font-semibold text-primary">400+ units</span>
+                                        <span>Supplements</span>
+                                        <span className="font-semibold text-primary">40+ units</span>
                                     </div>
                                 </div>
                                 <div className="mt-6 p-4 bg-primary/5 rounded-lg">
-                                    <p className="text-sm text-gray-600 text-center">
-                                        <strong>Volume Discounts:</strong> Save up to 15% on orders above ₹50,000
+                                    <p className="text-sm text-muted-foreground text-center">
+                                        <strong>Volume Discounts:</strong> Save up to 15% on orders above ₹50,00
                                     </p>
                                 </div>
                             </Card>
@@ -392,14 +323,16 @@ export default function ProductsPage() {
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-                            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+                            <Button disabled size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
                                 <FileText className="w-5 h-5 mr-2" />
                                 Download Product Catalog
                             </Button>
-                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                                <Phone className="w-5 h-5 mr-2" />
-                                Request Wholesale Quote
-                            </Button>
+                            <Link href="/contact">
+                                <Button size="lg" variant="outline"  className="bg-white text-primary hover:bg-gray-100">
+                                    <Phone className="w-5 h-5 mr-2" />
+                                    Request Wholesale Quote
+                                </Button>
+                            </Link>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">

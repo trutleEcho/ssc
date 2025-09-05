@@ -168,7 +168,7 @@ const HorizontalCarouselGallery = ({
                                             <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">
                                                 {item.description}
                                             </div>
-                                            <Link href="/products" className="inline-flex items-center gap-2 rounded-full bg-primary/90 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:scale-105">
+                                            <Link href="/products/#catagories" className="inline-flex items-center gap-2 rounded-full bg-primary/90 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:scale-105">
                                                 Explore Category
                                                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                                             </Link>
