@@ -20,10 +20,12 @@ const GradientOverlayCta = () => {
                             Join thousands of businesses who trust Shivam Sales Corporation for their Ayurvedic product needs. Get competitive wholesale pricing and reliable service.
                         </p>
                         <div className="flex flex-col justify-center gap-2 sm:flex-row">
-                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white hover:scale-105">
-                                Request Wholesale Catalog
-                            </Button>
-                            <Link href="https://queue-roan.vercel.app/cus/685f93278b98633147db36c4" target="_blank">
+                            <Link href="/contact">
+                                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white hover:scale-105">
+                                    Request Wholesale Catalog
+                                </Button>
+                            </Link>
+                            <Link href="/contact">
                                 <Button size="lg" variant="secondary" className="hover:scale-105">
                                     Schedule Meeting
                                 </Button>

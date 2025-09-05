@@ -10,6 +10,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 export interface HorizontalCarouselGalleryItem {
     id: string;
@@ -70,16 +71,7 @@ const data = [
         href: "/products/cosmetic-personal-care",
         image:
             "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3",
-    },
-    {
-        id: "wellness-teas-extracts",
-        title: "Wellness Teas & Extracts",
-        description:
-            "Herbal tea blends and concentrated extracts designed to support daily wellness, immunity, and specific health goals.",
-        href: "/products/wellness-teas-extracts",
-        image:
-            "https://images.unsplash.com/photo-1556909114-4f6bdc3d3130?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3",
-    },
+    }
 ];
 
 const HorizontalCarouselGallery = ({
@@ -176,10 +168,10 @@ const HorizontalCarouselGallery = ({
                                             <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">
                                                 {item.description}
                                             </div>
-                                            <div className="inline-flex items-center gap-2 rounded-full bg-primary/90 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:scale-105">
+                                            <Link href="/products" className="inline-flex items-center gap-2 rounded-full bg-primary/90 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:scale-105">
                                                 Explore Category
                                                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

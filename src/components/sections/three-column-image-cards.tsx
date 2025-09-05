@@ -1,4 +1,4 @@
-"use client";
+export const revalidate = false;
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -10,19 +10,19 @@ const utilities = [
         description:
             "All products are sourced from certified manufacturers and verified brands",
         image:
-            "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0",
+            "https://cdn.pixabay.com/photo/2021/09/18/20/50/truffles-6636081_1280.jpg",
     },
     {
         title: "Extensive Product Range",
         description:
             "Over 5000+ Ayurvedic products including medicines, herbs, oils, and wellness supplements",
         image:
-            "https://images.unsplash.com/photo-1594736797933-d0d7503ba3a9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0",
+            "https://cdn.pixabay.com/photo/2015/07/15/19/59/health-846863_1280.jpg",
     },
     {
         title: "Nationwide Distribution",
         description:
-            "Efficient supply chain covering 25+ states with timely delivery and competitive pricing",
+            "Efficient supply chain covering 5+ states with timely delivery and competitive pricing",
         image:
             "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0",
     },

@@ -1,5 +1,3 @@
-export const revalidate = false;
-
 import {HeroSection} from "@/components/sections/hero-section";
 import {ThreeColumnImageCards} from "@/components/sections/three-column-image-cards";
 import {HorizontalCarouselGallery} from "@/components/sections/horizontal-carousel-gallery";

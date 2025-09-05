@@ -10,7 +10,7 @@ const SimpleGridStats = () => {
                         <p className="text-sm font-medium text-muted-foreground">
                             Years of Experience
                         </p>
-                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">30+</p>
+                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">10+</p>
                         <p className="text-xl font-semibold text-muted-foreground">
                             Serving the Ayurvedic industry with dedication
                         </p>
@@ -28,7 +28,7 @@ const SimpleGridStats = () => {
                         <p className="text-sm font-medium text-muted-foreground">
                             Happy Clients
                         </p>
-                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">500+</p>
+                        <p className="pt-4 text-7xl font-semibold lg:pt-10 text-primary">5000+</p>
                         <p className="text-xl font-semibold text-muted-foreground">
                             Retailers and pharmacies nationwide
                         </p>
