@@ -21,7 +21,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
-import {Header} from "@/components/layout/header";
 
 const LeftBorderIndicatorNavbar = () => {
     return (
@@ -36,7 +35,7 @@ const LeftBorderIndicatorNavbar = () => {
                         </div>
                     </div>
                     <div className="hidden md:flex items-center space-x-6">
-                        <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>
+                        <Link href="/public" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>
                         <Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">Products</Link>
                         <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
                         <Link href="/contact" className="text-primary font-medium">Contact</Link>
@@ -101,8 +100,6 @@ export default function ContactPage() {
 
     return (
         <div className="min-h-screen bg-background">
-            <Header />
-
             {/* Hero Section */}
             <section className="py-20 bg-gradient-to-br from-primary/5 to-emerald/5">
                 <div className="container mx-auto px-4 text-center">

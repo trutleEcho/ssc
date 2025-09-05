@@ -21,7 +21,6 @@ import {
     Phone,
     Mail
 } from 'lucide-react';
-import {Header} from "@/components/layout/header";
 
 interface ProductCategory {
     icon: React.ComponentType<{ className?: string }>;
@@ -130,8 +129,6 @@ const featuredProducts: FeaturedProduct[] = [
 export default function ProductsPage() {
     return (
         <div className="min-h-screen bg-background">
-            <Header />
-
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary/5 via-emerald/5 to-accent/5 py-16">
                 <div className="container mx-auto px-6">

@@ -1,0 +1,13 @@
+{
+  "dashboard": {
+    "hero": {
+      "badge": "Trusted Ayurvedic Wholesaler Since 1995",
+      "heading": "Premium Ayurvedic Products for {highlight}",
+      "highlight": "Your Business Success",
+      "description": "Shivam Sales Corporation is your reliable partner for authentic Ayurvedic medicines, herbs, and wellness products. We supply quality-assured products to retailers, pharmacies, and wellness centers across India.",
+      "catalogButton": "View Product Catalog",
+      "pricingButton": "Get Wholesale Pricing",
+      "imageAlt": "Authentic Ayurvedic herbs, medicinal plants, and traditional wellness products arranged beautifully"
+    }
+  }
+}

@@ -1,8 +1,9 @@
+export const revalidate = false;
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Leaf, Award, Users, TrendingUp, Shield, Globe, Building, CheckCircle, Star, MapPin, Calendar, Target, Heart, Lightbulb, Handshake, Clock, Package, Truck, Factory } from 'lucide-react';
-import {Header} from "@/components/layout/header";
 
 interface StatisticCardProps {
     icon: React.ReactNode;
@@ -220,8 +221,6 @@ export default function AboutPage() {
 
     return (
         <div className="min-h-screen bg-background">
-            <Header />
-
             {/* Hero Section */}
             <section className="relative py-20 px-4">
                 <div className="max-w-7xl mx-auto">

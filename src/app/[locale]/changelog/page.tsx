@@ -57,7 +57,7 @@ export default async function ChangelogPage() {
                 <div className="px-6 py-6">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
-                            <Link href="/">
+                            <Link href="/public">
                                 <Button variant="ghost" size="sm" className="gap-2">
                                     <ArrowLeft className="w-4 h-4" />
                                     Back

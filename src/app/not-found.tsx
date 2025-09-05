@@ -61,58 +61,58 @@ export default function NotFoundPage() {
                 ))}
             </div>
 
-            {/* Header with Logo */}
-            <motion.header
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 p-6 md:p-8 flex items-center justify-between"
-            >
-                <Link href="/" className="inline-block">
-                    <div className="flex items-center space-x-3 group">
-                        <motion.div
-                            whileHover={{ rotate: 360 }}
-                            transition={{ duration: 0.5 }}
-                            className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center"
-                        >
-                            {/* 64x64 Logos */}
-                            <Image
-                                src="/CORSW_BG_LIGHT_64x64.png"
-                                alt="Logo"
-                                width={64}
-                                height={64}
-                                className="hidden md:block dark:hidden"
-                            />
-                            <Image
-                                src="/CORSW_BG_DARK_64x64.png"
-                                alt="Logo"
-                                width={64}
-                                height={64}
-                                className="hidden dark:md:block"
-                            />
-
-                            {/* 32x32 Logos */}
-                            <Image
-                                src="/CORSW_BG_LIGHT_32x32.png"
-                                alt="Logo"
-                                width={32}
-                                height={32}
-                                className="block md:hidden dark:hidden"
-                            />
-                            <Image
-                                src="/CORSW_BG_DARK_32x32.png"
-                                alt="Logo"
-                                width={32}
-                                height={32}
-                                className="hidden dark:block dark:md:hidden"
-                            />
-                        </motion.div>
-                        <span className="text-xl font-bold">
-              Corner Software
-            </span>
-                    </div>
-                </Link>
-            </motion.header>
+            {/*/!* Header with Logo *!/*/}
+            {/*<motion.header*/}
+            {/*    initial={{ opacity: 0, y: -50 }}*/}
+            {/*    animate={{ opacity: 1, y: 0 }}*/}
+            {/*    transition={{ duration: 0.8, ease: "easeOut" }}*/}
+            {/*    className="relative z-10 p-6 md:p-8 flex items-center justify-between"*/}
+            {/*>*/}
+            {/*    <Link href="/" className="inline-block">*/}
+            {/*        <div className="flex items-center space-x-3 group">*/}
+            {/*            <motion.div*/}
+            {/*                whileHover={{ rotate: 360 }}*/}
+            {/*                transition={{ duration: 0.5 }}*/}
+            {/*                className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center"*/}
+            {/*            >*/}
+            {/*                /!* 64x64 Logos *!/*/}
+            {/*                <Image*/}
+            {/*                    src="/CORSW_BG_LIGHT_64x64.png"*/}
+            {/*                    alt="Logo"*/}
+            {/*                    width={64}*/}
+            {/*                    height={64}*/}
+            {/*                    className="hidden md:block dark:hidden"*/}
+            {/*                />*/}
+            {/*                <Image*/}
+            {/*                    src="/CORSW_BG_DARK_64x64.png"*/}
+            {/*                    alt="Logo"*/}
+            {/*                    width={64}*/}
+            {/*                    height={64}*/}
+            {/*                    className="hidden dark:md:block"*/}
+            {/*                />*/}
+            
+            {/*                /!* 32x32 Logos *!/*/}
+            {/*                <Image*/}
+            {/*                    src="/CORSW_BG_LIGHT_32x32.png"*/}
+            {/*                    alt="Logo"*/}
+            {/*                    width={32}*/}
+            {/*                    height={32}*/}
+            {/*                    className="block md:hidden dark:hidden"*/}
+            {/*                />*/}
+            {/*                <Image*/}
+            {/*                    src="/CORSW_BG_DARK_32x32.png"*/}
+            {/*                    alt="Logo"*/}
+            {/*                    width={32}*/}
+            {/*                    height={32}*/}
+            {/*                    className="hidden dark:block dark:md:hidden"*/}
+            {/*                />*/}
+            {/*            </motion.div>*/}
+            {/*            <span className="text-xl font-bold">*/}
+            {/*  Corner Software*/}
+            {/*</span>*/}
+            {/*        </div>*/}
+            {/*    </Link>*/}
+            {/*</motion.header>*/}
 
             {/* Main Content */}
             <div className="flex-1 flex items-center justify-center px-6 relative z-10">
@@ -223,7 +223,7 @@ export default function NotFoundPage() {
                 className="relative z-10 p-6 text-center"
             >
                 <p className="text-gray-500 text-sm">
-                    © 2025 Corner Software. All rights reserved.
+                    ©{new Date().getFullYear()} Shivam Sales Corporation All rights reserved.
                 </p>
             </motion.footer>
 

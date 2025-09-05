@@ -1,11 +1,12 @@
 "use client";
 
+export const revalidate = false;
+
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
-import Image from "next/image";
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import pkg from "../../../package.json"
 
 const navigation = [
     {
@@ -107,9 +108,9 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t pt-10">
+            <div className="max-w-7xl mx-auto gap-4 border-t pt-10">
                 {/* Bottom Section */}
-                <div className="flex flex-col items-center justify-between gap-6">
+                <div className="flex flex-row items-center justify-between gap-6">
                     <div className="order-1 mb-6 flex w-full items-center justify-center gap-6 sm:justify-start md:order-2 md:mb-0 md:w-auto">
                         {socialLinks.map((link) => (
                             <a
@@ -132,53 +133,53 @@ export const Footer = () => {
 
                     {/*Version Details*/}
                     <Link href="/changelog" className="text-muted-foreground sm:text-left">
-                        v0.0.2
+                        v{pkg.version}
                     </Link>
 
                 </div>
 
                 {/* Right: Developer Info */}
-                <div className="flex flex-col items-center gap-2 text-center bg-muted-foreground/20 rounded-lg p-6 px-12">
-                    <span className="text-xs">Developed & maintained by</span>
-                    <div className="flex flex-col items-center">
-                        <Link
-                            href="https://corsw.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2"
-                        >
-                            <Image
-                                src="/CORSW_BG_LIGHT_64x64.png" // use a neutral or default logo for static rendering
-                                alt="Corner Softwares"
-                                width={48}
-                                height={48}
-                                priority
-                                className="block dark:hidden"
-                            />
-                        </Link>
-                        <Tooltip>
-                            <TooltipTrigger className="mt-2">
-                                <Link
-                                    href="https://corsw.vercel.app/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="underline font-semibold text-foreground"
-                                >
-                                    Corner Softwares
-                                </Link>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>We don’t just build. We architect.</p>
-                            </TooltipContent>
-                        </Tooltip>
-                        <a
-                            className="font-extralight"
-                            href="mailto:trichup20@gmail.com"
-                        >
-                            Contact Developer
-                        </a>
-                    </div>
-                </div>
+                {/*<div className="flex flex-col items-center gap-2 text-center bg-muted-foreground/20 rounded-lg p-6 px-12">*/}
+                {/*    <span className="text-xs">Developed & maintained by</span>*/}
+                {/*    <div className="flex flex-col items-center">*/}
+                {/*        <Link*/}
+                {/*            href="https://corsw.vercel.app/"*/}
+                {/*            target="_blank"*/}
+                {/*            rel="noopener noreferrer"*/}
+                {/*            className="flex items-center gap-2"*/}
+                {/*        >*/}
+                {/*            <Image*/}
+                {/*                src="/CORSW_BG_LIGHT_64x64.png" // use a neutral or default logo for static rendering*/}
+                {/*                alt="Corner Softwares"*/}
+                {/*                width={48}*/}
+                {/*                height={48}*/}
+                {/*                priority*/}
+                {/*                className="block dark:hidden"*/}
+                {/*            />*/}
+                {/*        </Link>*/}
+                {/*        <Tooltip>*/}
+                {/*            <TooltipTrigger className="mt-2">*/}
+                {/*                <Link*/}
+                {/*                    href="https://corsw.vercel.app/"*/}
+                {/*                    target="_blank"*/}
+                {/*                    rel="noopener noreferrer"*/}
+                {/*                    className="underline font-semibold text-foreground"*/}
+                {/*                >*/}
+                {/*                    Corner Softwares*/}
+                {/*                </Link>*/}
+                {/*            </TooltipTrigger>*/}
+                {/*            <TooltipContent>*/}
+                {/*                <p>We don’t just build. We architect.</p>*/}
+                {/*            </TooltipContent>*/}
+                {/*        </Tooltip>*/}
+                {/*        <a*/}
+                {/*            className="font-extralight"*/}
+                {/*            href="mailto:trichup20@gmail.com"*/}
+                {/*        >*/}
+                {/*            Contact Developer*/}
+                {/*        </a>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );
